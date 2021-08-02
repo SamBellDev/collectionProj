@@ -7,56 +7,27 @@
 </head>
 
 <body>
+
 <h1>My collection</h1>
-<form>
-    <label>
-        New Item:
-        <input type="text" name="newItem">
-    </label>
-    <label>
-        Stat 1:
-        <input type="text" name="stat1">
-    </label>
-    <label>
-        Stat 2:
-        <input type="text" name="stat2">
-    </label>
-    <label>
-        Stat 3:
-        <input type="text" name="stat3">
-    </label>
-    <input type="submit" name="submit">
-</form>
-<p> Item 1
-    <ul>
-        <li>stat 1
-        </li>
-        <li>stat 2
-        </li>
-        <li>stat 3
-        </li>
-    </ul>
-</p>
-<p> Item 2
+
+<p>Item 1</p>
 <ul>
-    <li>stat 1
-    </li>
-    <li>stat 2
-    </li>
-    <li>stat 3
-    </li>
+    <li>stat 1</li>
+    <li>stat 2</li>
+    <li>stat 3</li>
 </ul>
-</p>
-<p> Item 3
+<p>Item 2</p>
 <ul>
-    <li>stat 1
-    </li>
-    <li>stat 2
-    </li>
-    <li>stat 3
-    </li>
+    <li>stat 1</li>
+    <li>stat 2</li>
+    <li>stat 3</li>
 </ul>
-</p>
+<p>Item 3</p>
+<ul>
+    <li>stat 1</li>
+    <li>stat 2</li>
+    <li>stat 3</li>
+</ul>
 </body>
 
 </html>
