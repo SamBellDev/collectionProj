@@ -1,5 +1,16 @@
 <?php
+
+require_once 'functions.php';
+
+$db = new PDO('mysql:host=db; dbname=proj2DB', 'root', 'password');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$getCoinsQuery = $db->prepare('SELECT * FROM `coins`;');
+$getCoinsQuery->execute();
+$coinsAll = $getCoinsQuery->fetchALL();
+
 ?>
+
 <html lang="en">
 <head>
     <title>My collection</title>
@@ -8,26 +19,10 @@
 
 <body>
 
-<h1>My collection</h1>
+    <h1>My collection</h1>
 
-<p>Item 1</p>
-<ul>
-    <li>stat 1</li>
-    <li>stat 2</li>
-    <li>stat 3</li>
-</ul>
-<p>Item 2</p>
-<ul>
-    <li>stat 1</li>
-    <li>stat 2</li>
-    <li>stat 3</li>
-</ul>
-<p>Item 3</p>
-<ul>
-    <li>stat 1</li>
-    <li>stat 2</li>
-    <li>stat 3</li>
-</ul>
+    <?php echo createItems($coinsAll); ?>
+
 </body>
 
 </html>
