@@ -19,9 +19,9 @@ $coinsAll = $getCoinsQuery->fetchALL();
 
 <body>
 
-<h1>My collection</h1>
+    <h1>My collection</h1>
 
-<?php echo createItems($coinsAll); ?>
+    <?php echo createItems($coinsAll); ?>
 
 </body>
 
