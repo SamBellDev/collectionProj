@@ -15,6 +15,15 @@ class Functions extends TestCase {
         $actualOutput = createItems($input);
         $this->assertEquals($expectedOutput, $actualOutput);
     }
+
+    public function testFailureCreateItems() {
+        $badArray = [[0],[0]];
+        $expectedOutput = 'Provide a valid array argument';
+        $input = $badArray;
+        $actualOutput = createItems($input);
+        $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
     public function testMalformedCreateItems() {
         $input = 'banana';
         $this->expectException(TypeError::class);
