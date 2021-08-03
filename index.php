@@ -18,11 +18,11 @@ print_r($coinsAll);
 </head>
 
 <body>
-
+<main>
     <h1>My collection</h1>
 
     <?php echo createItems($coinsAll); ?>
-
+</main>
 </body>
 
 </html>
