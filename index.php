@@ -20,16 +20,16 @@ $coinsAll = $getCoinsQuery->fetchALL();
 <main>
     <h1>My collection</h1>
 
-        <form>
-            <label for=coinName"><input type="text" placeholder="Enter coin name" name="coinName"></label>
-            <label for="yearMinted"><input type="text" placeholder="BC||AD yyyy" name="yearMinted"></label>
-            <label for="material"><input type="text" placeholder="What material is the coin?" name="material"></label>
-            <label for="diameter"><input type="text" placeholder="What is the coin's diameter?" name="diameter"></label>
-            <label for="submitBtn"><input type="submit" name="submitBtn"></label>
-        </form>
+    <form>
+        <label for=coinName"><input type="text" placeholder="Enter coin name" name="coinName"></label>
+        <label for="yearMinted"><input type="text" placeholder="BC||AD yyyy" name="yearMinted"></label>
+        <label for="material"><input type="text" placeholder="What material is the coin?" name="material"></label>
+        <label for="diameter"><input type="text" placeholder="What is the coin's diameter?" name="diameter"></label>
+        <label for="submitBtn"><input type="submit" name="submitBtn"></label>
+    </form>
 
+    <?php echo createItems($coinsAll);?>
 
-    <?php echo createItems($coinsAll); ?>
 </main>
 </body>
 
