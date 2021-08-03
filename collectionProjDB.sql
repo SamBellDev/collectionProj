@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.34)
 # Database: proj2DB
-# Generation Time: 2021-08-02 12:18:59 +0000
+# Generation Time: 2021-08-03 11:12:11 +0000
 # ************************************************************
 
 
@@ -42,7 +42,7 @@ INSERT INTO `coins` (`id`, `coinName`, `yearMinted`, `material`, `diameter`)
 VALUES
 	(1,'Roman coin','AD 76','Gold','16.82mm'),
 	(2,'Victorian coin','AD 1865','Unknown','Unknown'),
-	(3,'Modern coin','AD 2021','Nickel-brass and nickel plated brass allow','23.43mm');
+	(3,'Modern coin','AD 2021','Nickel-brass and nickel plated brass alloy','23.43mm');
 
 /*!40000 ALTER TABLE `coins` ENABLE KEYS */;
 UNLOCK TABLES;
