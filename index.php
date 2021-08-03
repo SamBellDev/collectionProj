@@ -8,7 +8,6 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $getCoinsQuery = $db->prepare('SELECT * FROM `coins`;');
 $getCoinsQuery->execute();
 $coinsAll = $getCoinsQuery->fetchALL();
-print_r($coinsAll);
 ?>
 
 <html lang="en">
