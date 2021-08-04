@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.34)
 # Database: proj2DB
-# Generation Time: 2021-08-04 09:27:23 +0000
+# Generation Time: 2021-08-04 12:18:18 +0000
 # ************************************************************
 
 
@@ -43,7 +43,7 @@ VALUES
 	(1,'Roman coin','AD 76','Gold','16.82mm'),
 	(2,'Victorian coin','AD 1865','Unknown','Unknown'),
 	(3,'Modern coin','AD 2021','Nickel-brass and nickel plated brass alloy','23.43mm'),
-	(4,'Doge','2021','imagination','infinity');
+	(4,'Doge','AD 2021','Speculative will','3474000000mm');
 
 /*!40000 ALTER TABLE `coins` ENABLE KEYS */;
 UNLOCK TABLES;
