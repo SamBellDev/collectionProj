@@ -30,6 +30,7 @@ $result = $submitCoinQuery->execute();
     <h1>My collection</h1>
 
     <form action="index.php" method="POST">
+
         <label for=coinName"><input type="text" placeholder="Enter coin name" name="coinName"></label>
         <label for="yearMinted"><input type="text" placeholder="BC||AD yyyy" name="yearMinted"></label>
         <label for="material"><input type="text" placeholder="What material is the coin?" name="material"></label>
