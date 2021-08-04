@@ -2,6 +2,8 @@
 
 require_once 'functions.php';
 
+session_start();
+
 $db = new PDO('mysql:host=db; dbname=proj2DB', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
@@ -11,15 +13,22 @@ $coinsAll = $getCoinsQuery->fetchALL();
 
 $submitCoinQuery = $db->prepare(
     'INSERT INTO `coins` (`coinName`, `yearMinted`, `material`, `diameter`) VALUES (:coinName, :yearMinted, :material, :diameter);');
-$submitCoinQuery->bindParam(':coinName', $_POST['coinName']);
-$submitCoinQuery->bindParam(':yearMinted', $_POST['yearMinted']);
-$submitCoinQuery->bindParam(':material', $_POST['material']);
-$submitCoinQuery->bindParam(':diameter', $_POST['diameter']);
-if($_POST['coinName'] == "" || $_POST['yearMinted'] == "" || $_POST['material'] == "" || $_POST['diameter'] == "") {
-    echo 'Please enter values for all fields';
-} else {
+$submitCoinQuery->bindParam(':coinName', $coinName);
+$submitCoinQuery->bindParam(':yearMinted', $yearMinted);
+$submitCoinQuery->bindParam(':material', $material);
+$submitCoinQuery->bindParam(':diameter', $diameter);
+
+if(count($_SESSION) && isset($_POST)) {
+    $coinName = $_SESSION['coinName'];
+    $yearMinted = $_SESSION['yearMinted'];
+    $material = $_SESSION['material'];
+    $diameter = $_SESSION['diameter'];
     $submitCoinQuery->execute();
+    header("location:index.php");
 }
+
+session_unset();
+session_destroy();
 
 ?>
 
@@ -33,7 +42,7 @@ if($_POST['coinName'] == "" || $_POST['yearMinted'] == "" || $_POST['material'] 
 <main>
     <h1>My collection</h1>
 
-    <form action="index.php" method="POST">
+    <form action="formValidator.php" method="POST">
         <label for="coinName"><p>Please enter the name of your coin.</p><input type="text" placeholder="Coin name" id="coinName" name="coinName" required></label>
         <label for="yearMinted"><p>Please enter the year your coin was minted.</p><input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required></label>
         <label for="material"><p>Please enter the material your coin is made from.</p><input type="text" placeholder="Material" id="material" name="material" required></label>
