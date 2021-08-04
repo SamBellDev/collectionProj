@@ -8,6 +8,15 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $getCoinsQuery = $db->prepare('SELECT * FROM `coins`;');
 $getCoinsQuery->execute();
 $coinsAll = $getCoinsQuery->fetchALL();
+
+$submitCoinQuery = $db->prepare(
+    'INSERT INTO `coins` (`coinName`, `yearMinted`, `material`, `diameter`) VALUES (:coinName, :yearMinted, :material, :diameter);');
+$submitCoinQuery->bindParam(':coinName', $_POST['coinName']);
+$submitCoinQuery->bindParam(':yearMinted', $_POST['yearMinted']);
+$submitCoinQuery->bindParam(':material', $_POST['material']);
+$submitCoinQuery->bindParam(':diameter', $_Post['diameter']);
+$result = $submitCoinQuery->execute();
+
 ?>
 
 <html lang="en">
@@ -20,7 +29,8 @@ $coinsAll = $getCoinsQuery->fetchALL();
 <main>
     <h1>My collection</h1>
 
-    <form>
+    <form action="index.php" method="POST">
+
         <label for=coinName"><input type="text" placeholder="Enter coin name" name="coinName"></label>
         <label for="yearMinted"><input type="text" placeholder="BC||AD yyyy" name="yearMinted"></label>
         <label for="material"><input type="text" placeholder="What material is the coin?" name="material"></label>
