@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.34)
 # Database: proj2DB
-# Generation Time: 2021-08-03 11:12:11 +0000
+# Generation Time: 2021-08-03 14:32:36 +0000
 # ************************************************************
 
 
@@ -28,7 +28,7 @@ DROP TABLE IF EXISTS `coins`;
 
 CREATE TABLE `coins` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `coinName` varchar(20) DEFAULT NULL,
+  `coinName` varchar(250) DEFAULT NULL,
   `yearMinted` varchar(250) DEFAULT NULL,
   `material` varchar(250) DEFAULT NULL,
   `diameter` varchar(250) DEFAULT NULL,
