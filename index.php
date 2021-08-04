@@ -14,8 +14,8 @@ $submitCoinQuery = $db->prepare(
 $submitCoinQuery->bindParam(':coinName', $_POST['coinName']);
 $submitCoinQuery->bindParam(':yearMinted', $_POST['yearMinted']);
 $submitCoinQuery->bindParam(':material', $_POST['material']);
-$submitCoinQuery->bindParam(':diameter', $_Post['diameter']);
-if($_POST['coinName'] = "" || $_POST['yearMinted'] = "" || $_POST['material'] = "" || $_POST['diameter'] = "") {
+$submitCoinQuery->bindParam(':diameter', $_POST['diameter']);
+if($_POST['coinName'] == "" || $_POST['yearMinted'] == "" || $_POST['material'] == "" || $_POST['diameter'] == "") {
     echo 'Please enter values for all fields';
 } else {
     $submitCoinQuery->execute();
