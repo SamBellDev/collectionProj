@@ -35,23 +35,30 @@ session_destroy();
 <html lang="en">
 <head>
     <title>My collection</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 </head>
 
 <body>
+<nav>
+    <a href="#addCoin">Add coin</a>
+    <a href="#coinCollection">Coin collection</a>
+</nav>
 <main>
     <h1>My collection</h1>
 
-    <form action="formValidator.php" method="POST">
+    <form action="formValidator.php" method="POST" id="addCoin">
         <label for="coinName">Please enter the name of your coin.<input type="text" placeholder="Coin name" id="coinName" name="coinName" required></label>
         <label for="yearMinted">Please enter the year your coin was minted.<input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required></label>
         <label for="material">Please enter the material your coin is made from.<input type="text" placeholder="Material" id="material" name="material" required></label>
         <label for="diameter">Please enter the diameter of the coin.<input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required></label>
         <label for="submitBtn">Submit your coin to your collection.<input type="submit" value="Submit coin" id="submitBtn" name="submitBtn"></label>
     </form>
+    <div id="coinCollection">
+        <?php echo createItems($coinsAll);?>
+    </div>
 
-    <?php echo createItems($coinsAll);?>
 
 </main>
 </body>

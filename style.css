@@ -1,1 +1,11 @@
-form > label {display: block}
+* {
+    box-sizing: border-box;
+}
+
+form > label {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
