@@ -8,7 +8,7 @@
 # Host: 127.0.0.1 (MySQL 5.7.34)
 # Database: proj2DB
 # Generation Time: 2021-08-04 09:27:23 +0000
-# ************************************************************
+
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
