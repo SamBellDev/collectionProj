@@ -30,11 +30,11 @@ $submitCoinQuery->execute();
     <h1>My collection</h1>
 
     <form action="index.php" method="POST">
-        <label for="coinName"><p>Please enter the name of your coin.</p><input type="text" placeholder="Coin name" id="coinName" name="coinName"></label>
-        <label for="yearMinted"><p>Please enter the year your coin was minted.</p><input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted"></label>
-        <label for="material"><p>Please enter the material your coin is made from.</p><input type="text" placeholder="Material" id="material" name="material"></label>
-        <label for="diameter"><p>Please enter the diameter of the coin.</p><input type="text" placeholder="xx.xxmm" id="diameter" name="diameter"></label>
-        <label for="submitBtn"><p>Submit your coin to your collection.</p><input type="submit" value="Submit coin" " id="submitBtn" name="submitBtn"></label>
+        <label for="coinName"><p>Please enter the name of your coin.</p><input type="text" placeholder="Coin name" id="coinName" name="coinName" required></label>
+        <label for="yearMinted"><p>Please enter the year your coin was minted.</p><input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required></label>
+        <label for="material"><p>Please enter the material your coin is made from.</p><input type="text" placeholder="Material" id="material" name="material" required></label>
+        <label for="diameter"><p>Please enter the diameter of the coin.</p><input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required></label>
+        <label for="submitBtn"><p>Submit your coin to your collection.</p><input type="submit" value="Submit coin" id="submitBtn" name="submitBtn"></label>
     </form>
 
     <?php echo createItems($coinsAll);?>
