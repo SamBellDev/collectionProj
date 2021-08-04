@@ -10,13 +10,12 @@ $getCoinsQuery->execute();
 $coinsAll = $getCoinsQuery->fetchALL();
 
 $submitCoinQuery = $db->prepare(
-    'INSERT INTO `coins` (`coinName`, `yearMinted`, `material`, `diameter`) VALUES (:$coinName, :$yearMinted, :$material, :$diameter);'
-);
+    'INSERT INTO `coins` (`coinName`, `yearMinted`, `material`, `diameter`) VALUES (:coinName, :yearMinted, :material, :diameter);');
 $submitCoinQuery->bindParam(':coinName', $_POST['coinName']);
 $submitCoinQuery->bindParam(':yearMinted', $_POST['yearMinted']);
 $submitCoinQuery->bindParam(':material', $_POST['material']);
 $submitCoinQuery->bindParam(':diameter', $_Post['diameter']);
-$submitCoinQuery->execute();
+$result = $submitCoinQuery->execute();
 
 ?>
 
@@ -26,7 +25,7 @@ $submitCoinQuery->execute();
     <meta charset="utf-8">
 </head>
 
-<body>git 
+<body>
 <main>
     <h1>My collection</h1>
 
