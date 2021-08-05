@@ -77,7 +77,6 @@ session_destroy();
         <?php echo createItems($coinsAll);?>
     </div>
 
-
 </main>
 </body>
 
