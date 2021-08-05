@@ -47,19 +47,20 @@ session_destroy();
 </nav>
 <main>
     <h1>My collection</h1>
-
-    <form action="formValidator.php" method="POST" id="addCoin">
-        <label for="coinName">Please enter the name of your coin.</label>
-        <input type="text" placeholder="Coin name" id="coinName" name="coinName" required>
-        <label for="yearMinted">Please enter the year your coin was minted.</label>
-        <input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required>
-        <label for="material">Please enter the material your coin is made from.</label>
-        <input type="text" placeholder="Material" id="material" name="material" required>
-        <label for="diameter">Please enter the diameter of the coin.</label>
-        <input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required>
-        <label for="submitBtn">Submit your coin to your collection.</label>
-        <input type="submit" value="Submit coin" id="submitBtn" name="submitBtn">
-    </form>
+    <div id="addCoin" class="formContainer">
+        <form action="formValidator.php" method="POST">
+            <label for="coinName">Please enter the name of your coin.</label>
+            <input type="text" placeholder="Coin name" id="coinName" name="coinName" required>
+            <label for="yearMinted">Please enter the year your coin was minted.</label>
+            <input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required>
+            <label for="material">Please enter the material your coin is made from.</label>
+            <input type="text" placeholder="Material" id="material" name="material" required>
+            <label for="diameter">Please enter the diameter of the coin.</label>
+            <input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required>
+            <label for="submitBtn">Submit your coin to your collection.</label>
+            <input type="submit" value="Submit coin" id="submitBtn" name="submitBtn">
+        </form>
+    </div>
 
     <div id="coinCollection">
         <?php echo createItems($coinsAll);?>
