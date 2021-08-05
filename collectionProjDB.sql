@@ -7,8 +7,9 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.34)
 # Database: proj2DB
-# Generation Time: 2021-08-03 14:32:36 +0000
-# ************************************************************
+# Generation Time: 2021-08-04 09:27:23 +0000
+
+>>>>>>> 049592796e83b844af6df107403431d84396d195
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,10 +29,10 @@ DROP TABLE IF EXISTS `coins`;
 
 CREATE TABLE `coins` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `coinName` varchar(250) DEFAULT NULL,
-  `yearMinted` varchar(250) DEFAULT NULL,
-  `material` varchar(250) DEFAULT NULL,
-  `diameter` varchar(250) DEFAULT NULL,
+  `coinName` varchar(250) NOT NULL DEFAULT '',
+  `yearMinted` varchar(250) NOT NULL DEFAULT '',
+  `material` varchar(250) NOT NULL DEFAULT '',
+  `diameter` varchar(250) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,7 +43,8 @@ INSERT INTO `coins` (`id`, `coinName`, `yearMinted`, `material`, `diameter`)
 VALUES
 	(1,'Roman coin','AD 76','Gold','16.82mm'),
 	(2,'Victorian coin','AD 1865','Unknown','Unknown'),
-	(3,'Modern coin','AD 2021','Nickel-brass and nickel plated brass alloy','23.43mm');
+	(3,'Modern coin','AD 2021','Nickel-brass and nickel plated brass alloy','23.43mm'),
+	(4,'Doge','AD 2021','Speculative will','3474000000mm');
 
 /*!40000 ALTER TABLE `coins` ENABLE KEYS */;
 UNLOCK TABLES;
