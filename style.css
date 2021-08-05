@@ -64,9 +64,20 @@ p {
     text-align: center;
 }
 
-ul > li {
-    text-align: center;
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+ul > div {
+    width: 60vw;
+    padding-left: 25%;
+}
+
+ul > div > li {
     color: #696969;
+    list-style: none;
+    justify-content: left;
 }
 
 .formContainer {

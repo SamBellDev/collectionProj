@@ -10,9 +10,11 @@ function createItems(array $coinsAll): string {
             $card .=
                 "<p>" . $coin['coinName'] . "</p>" .
                 "<ul>" .
+                "<div>" .
                 "<li>" . $coin['yearMinted'] . "</li>" .
                 "<li>" . $coin['material'] . "</li>" .
                 "<li>" . $coin['diameter'] . "</li>" .
+                "</div>" .
                 "</ul>";
         }
     }
