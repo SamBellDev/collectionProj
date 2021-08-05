@@ -7,10 +7,15 @@
 a {
     text-decoration: none;
     font-family: Ruda, sans-serif;
+    color: #ffffff;
 }
 
 a, a:visited {
-    color: inherit;
+    color: #ffffff;
+}
+
+body {
+    background-color: #f4f1eb;
 }
 
 form > label {
@@ -19,7 +24,7 @@ form > label {
 
 h1 {
     font-family: Ruda, sans-serif;
-    color: #3c4c6c;
+    color: #211c35;
     text-align: center;
     font-size: 4rem;
 }
@@ -34,14 +39,14 @@ input {
     display: block;
 }
 
-body {
-    background-color: #b1c1cc;
+label {
+    color: #696969;
 }
 
 nav {
     position: sticky;
     top: 0;
-    background-color: #a5b2b0;
+    background-color: #211c35;
     z-index: 3;
 }
 
@@ -53,7 +58,7 @@ nav > a {
 p {
     font-family: 'Roboto Slab', sans-serif;
     margin: 0 0 16px 0;
-    color: #752007;
+    color: #211c35;
     font-size: 1.2rem;
     line-height: 1.5;
     text-align: center;
@@ -61,6 +66,7 @@ p {
 
 ul > li {
     text-align: center;
+    color: #696969;
 }
 
 .formContainer {
@@ -78,4 +84,14 @@ ul > li {
 
 #addCoin, #coinCollection {
     scroll-margin: 35px;
+}
+
+#submitBtn {
+    background-color: #726d7f;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
