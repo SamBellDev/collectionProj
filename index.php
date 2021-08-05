@@ -35,22 +35,47 @@ session_destroy();
 <html lang="en">
 <head>
     <title>My collection</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 </head>
 
 <body>
+<nav class="navContainer">
+    <a href="#addCoin">Add coin</a>
+    <a href="#coinCollection">Coin collection</a>
+</nav>
 <main>
-    <h1>My collection</h1>
 
-    <form action="formValidator.php" method="POST">
-        <label for="coinName"><p>Please enter the name of your coin.</p><input type="text" placeholder="Coin name" id="coinName" name="coinName" required></label>
-        <label for="yearMinted"><p>Please enter the year your coin was minted.</p><input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required></label>
-        <label for="material"><p>Please enter the material your coin is made from.</p><input type="text" placeholder="Material" id="material" name="material" required></label>
-        <label for="diameter"><p>Please enter the diameter of the coin.</p><input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required></label>
-        <label for="submitBtn"><p>Submit your coin to your collection.</p><input type="submit" value="Submit coin" id="submitBtn" name="submitBtn"></label>
+    <h1>The Treasury</h1>
+
+    <form action="formValidator.php" method="POST" class="formContainer" id="addCoin">
+        <div class="inputPair">
+            <label for="coinName">Please enter the name of your coin.</label>
+            <input type="text" placeholder="Coin name" id="coinName" name="coinName" required>
+        </div>
+        <div class="inputPair">
+            <label for="yearMinted">Please enter the year your coin was minted.</label>
+            <input type="text" placeholder="BC||AD yyyy" id="yearMinted" name="yearMinted" required>
+        </div>
+        <div class="inputPair">
+            <label for="material">Please enter the material your coin is made from.</label>
+            <input type="text" placeholder="Material" id="material" name="material" required>
+        </div>
+       <div class="inputPair">
+           <label for="diameter">Please enter the diameter of the coin.</label>
+           <input type="text" placeholder="xx.xxmm" id="diameter" name="diameter" required>
+       </div>
+        <div class="inputPair">
+            <label for="submitBtn">Submit your coin to your collection.</label>
+            <input type="submit" value="Submit coin" id="submitBtn" name="submitBtn">
+        </div>
     </form>
 
-    <?php echo createItems($coinsAll);?>
+    <div id="coinCollection">
+        <?php echo createItems($coinsAll);?>
+    </div>
+
 
 </main>
 </body>
