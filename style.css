@@ -24,6 +24,7 @@ form > label {
 
 h1 {
     font-family: Ruda, sans-serif;
+    font-weight: bold;
     color: #211c35;
     text-align: center;
     font-size: 4rem;
@@ -97,9 +98,17 @@ ul > div > li {
 }
 
 #submitBtn {
-    background-color: #726d7f;
+    background-image: linear-gradient(
+            to right,
+            #462523 0,
+            #cb9b51 22%,
+            #f6e27a 45%,
+            #f6e27a 55%,
+            #cb9b51 78%,
+            #462523 100%
+    );
     border-radius: 12px;
-    color: #ffffff;
+    color: #211c35;;
     padding: 15px;
     text-align: center;
     text-decoration: none;
