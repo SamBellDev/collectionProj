@@ -70,6 +70,7 @@ session_destroy();
             <label for="submitBtn">Submit your coin to your collection.</label>
             <input type="submit" value="Submit coin" id="submitBtn" name="submitBtn">
         </div>
+
     </form>
 
     <div id="coinCollection">
