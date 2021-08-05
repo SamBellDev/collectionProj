@@ -2,10 +2,20 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+}
+
 form > label {
     display: block;
 }
 
-h1 {
+main {
+    background-color: #b1c1cc;
+}
+
+nav > a {
+    display: block;
     text-align: center;
 }
+
